@@ -48,4 +48,8 @@
 # print("\n".join(sorted(over_one)))
 
 
+# s = 'abcdabcdabcdefegeheiabcedi'
+# l = ['a', 'b', 'a', 'A']
+# print(' '.join([str(s.count(v)) for v in 'aeiou']))
+
 print(pow(2, 2))
