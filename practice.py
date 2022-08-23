@@ -48,23 +48,4 @@
 # print("\n".join(sorted(over_one)))
 
 
-# coding challenge
-# 'ahbuei' is legigraphically lowest
-# s = list('auehib')  # 'ahbuei' is legigraphically lowest
-
-# convert unicode to list of ints,
-s = list([ord(x) - 96 for x in 'auehib'])
-
-# list of vowels converted to int.
-# aeiou
-v = [1, 5, 9, 15, 21]
-
-result = []
-# check if previous value is vowel, then see if moving letter will
-for idx, x in enumerate(s):
-    # check if char can be moved. Is bigger than list.
-    # if x < s[idx]:
-    # check if char is vowel
-
-    # print(str(i).encode('utf-8').decode('utf-8'))
-print(s)
+print(pow(2, 2))
