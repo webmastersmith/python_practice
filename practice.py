@@ -52,4 +52,14 @@
 # l = ['a', 'b', 'a', 'A']
 # print(' '.join([str(s.count(v)) for v in 'aeiou']))
 
-print(pow(2, 2))
+# print(pow(2, 2))
+# s = '1234567 89'
+# n = 2
+# o = '-'.join([s[i:i+n] for i in range(0, len(s), n)])
+# print(o)
+
+
+# o = []
+# for i in range(0, len(s), n):
+#     o += [s[i:i+n]]
+# print(*o, sep='-')
