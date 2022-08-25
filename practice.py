@@ -63,3 +63,10 @@
 # for i in range(0, len(s), n):
 #     o += [s[i:i+n]]
 # print(*o, sep='-')
+
+
+print(10 // 3)
+a = 'hello'
+b = a
+b = b.capitalize()
+print(a, b)
