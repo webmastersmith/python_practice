@@ -65,8 +65,36 @@
 # print(*o, sep='-')
 
 
-print(10 // 3)
-a = 'hello'
-b = a
-b = b.capitalize()
-print(a, b)
+# print(10 // 3)
+# a = 'hello'
+# b = a
+# b = b.capitalize()
+# print(a, b)
+
+
+import math
+
+
+def sumDigits(a, b):
+    A = 1
+    for n in range(1, a+1):
+        A *= n
+    B = 1
+    for n in range(1, b+1):
+        B *= n
+    Q = str(math.floor(A / B))
+    R = 0
+    for n in Q:
+        R += int(n)
+    # print(R)
+    return R
+
+
+x = [(5, 3), (8, 6), (12, 12)]
+# 5,3 = 2
+# 8,6=11
+# 12,12 = 1
+# print(sumDigits(a, b))
+# print(int(math.factorial(a) / math.factorial(b)))
+for a, b in x:
+    print(sum([int(n) for n in str(int(math.factorial(a)/math.factorial(b)))]))
