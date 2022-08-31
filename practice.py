@@ -72,29 +72,98 @@
 # print(a, b)
 
 
-import math
+# x = [(5, 3), (8, 6), (12, 12)]
+# for a, b in x:
+#     print(sum([int(n) for n in str(int(math.factorial(a)/math.factorial(b)))]))
+
+# n = 6
+# print(''.join([str(i) for i in range(1, n+1)]) * n)
+# a = 5
+# b = 4
+# print(f'{a-b}{a+b}')
+
+# a = ['A', 'Z']
+# for i in range(24):
+#     a.insert(-1, ' ')
+
+# print(a.count(' '))
+# print(sum([k+1 for k, i in enumerate(a) if i == ' ']))
+
+# def isprime(num):
+#     for n in range(2, int(num**0.5)+1):
+#         if num % n == 0:
+#             return False
+#     return True
+# n = 10  # 7
+# a = [i for i in range(2, n) if isprime(i)]
+# print(a[-1])
+
+# s = "AGCASERTASDFTT TTGGGGGGGG"
+# fn = s.count
+# print(*s)
+
+# x = sum([int(str(n)[-1:]) for n in A])%(10**9 + 7)
+
+# coding challenge
+# def lastSum(N, A):
+#     if N == 0:
+#         return sum(A) % (10**9 + 7)
+
+#     A.append(int(str(A.pop(N-1))[-1:]))
+#     return lastSum(N-1, A)
 
 
-def sumDigits(a, b):
-    A = 1
-    for n in range(1, a+1):
-        A *= n
-    B = 1
-    for n in range(1, b+1):
-        B *= n
-    Q = str(math.floor(A / B))
-    R = 0
-    for n in Q:
-        R += int(n)
-    # print(R)
-    return R
+# print(lastSum(3, [123, 324, 2133]))
+
+# a = '4 4 4 4 4 4 4 4'
+# b = '3 3 3 3 3 3 3 3'
+# c = (sum(map(int, b.split())) - sum(map(int, a.split())))
+# print(c)
+
+# message = ['PROFESSOR', 'JIM', 'JONES']
+# for m in message:
+#     if m == 'PROFESSOR':
+#         print("Prof", end='.')
+#     elif m == 'DR.':
+#         print("Dr.", end='')
+#     else:
+#         print(m[0], end='.')
 
 
-x = [(5, 3), (8, 6), (12, 12)]
-# 5,3 = 2
-# 8,6=11
-# 12,12 = 1
-# print(sumDigits(a, b))
-# print(int(math.factorial(a) / math.factorial(b)))
-for a, b in x:
-    print(sum([int(n) for n in str(int(math.factorial(a)/math.factorial(b)))]))
+# x = 'hello'
+# def baseN(num, b, numerals="0123456789abcdefghijklmnopqrstuvwxyz"):
+#     return ((num == 0) and "0") or (baseN(num // b, b).lstrip("0") + numerals[num % b])
+# for i in x:
+#     print(baseN(ord(i), 36), end=',')
+
+# import base36
+# base36.dumps([])
+# print(''.join(['1', '2']))
+
+
+# challenge 8-30-2022
+# def averageValue(N, A):
+#     A.sort()
+#     return f"{sum(A[1:-1]) / (N-2):.5f}"
+
+
+# print(averageValue(6, [2, 3, 1, 4, 5, 2]))  # 2.75000
+# print(averageValue(4, [1, 3, 5, 7]))  # 4.00000
+# print(averageValue(5, [1000, 2000, 3000, 4000, 5000]))  # 3000.00000
+
+
+# codiing challenge 8-31-2022
+# def tribonacciNumbers(N):
+#     x = [0, 0, 1]
+#     for i in range(N):
+#         if N <= 2:
+#             return 0
+#         else:
+#             if i > 2:
+#                 x.append(x[i-1]+x[i-2]+x[i-3])
+#     return x[-1]
+
+
+# print(tribonacciNumbers(2))  # 0
+# print(tribonacciNumbers(8))  # 13
+# print(tribonacciNumbers(22))  # 66012
