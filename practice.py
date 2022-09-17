@@ -177,10 +177,10 @@
 #     return lastSum(N-1, A)
 
 # without recursion
-def lastSum(N, A):
-    return sum([n % 10 for n in A])
+# def lastSum(N, A):
+#     return sum([n % 10 for n in A])
 
 
-print(lastSum(3, [123, 324, 2133]))  # 10
-print(lastSum(4, [1, 1223, 324, 2133]))  # 11
-print(lastSum(4, [12, 1223, 324, 2133]))  # 12
+# print(lastSum(3, [123, 324, 2133]))  # 10
+# print(lastSum(4, [1, 1223, 324, 2133]))  # 11
+# print(lastSum(4, [12, 1223, 324, 2133]))  # 12
