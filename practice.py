@@ -184,3 +184,30 @@
 # print(lastSum(3, [123, 324, 2133]))  # 10
 # print(lastSum(4, [1, 1223, 324, 2133]))  # 11
 # print(lastSum(4, [12, 1223, 324, 2133]))  # 12
+
+
+def leftrightString(S):
+    first_letter = S[0]
+    if S.count(first_letter) <= 1:
+        return 0
+    countIdx = 0
+    tally = 0
+    for idx, i in enumerate(S):
+        # prevent errors by by-passing fist item in string.
+        if idx == 0:
+            continue
+        # if letters are same and side-by-side.
+        if i == first_letter and S[idx-1] == first_letter:
+            countIdx = idx
+            continue
+        # track last match position and distance from new match.
+        if i == first_letter:
+            countIdx += 1
+            tally += idx - countIdx
+    return tally
+
+
+# OUTPUT [uncomment & modify if required]
+print(leftrightString('cdacebdaecaddddbdebed'))  # 9
+print(leftrightString('abcdef'))  # 0
+print(leftrightString('bbadba'))  # 2
