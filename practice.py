@@ -186,28 +186,55 @@
 # print(lastSum(4, [12, 1223, 324, 2133]))  # 12
 
 
-def leftrightString(S):
-    first_letter = S[0]
-    if S.count(first_letter) <= 1:
-        return 0
-    countIdx = 0
-    tally = 0
-    for idx, i in enumerate(S):
-        # prevent errors by by-passing fist item in string.
-        if idx == 0:
-            continue
-        # if letters are same and side-by-side.
-        if i == first_letter and S[idx-1] == first_letter:
-            countIdx = idx
-            continue
-        # track last match position and distance from new match.
-        if i == first_letter:
-            countIdx += 1
-            tally += idx - countIdx
-    return tally
+# def leftrightString(S):
+#     first_letter = S[0]
+#     if S.count(first_letter) <= 1:
+#         return 0
+#     countIdx = 0
+#     tally = 0
+#     for idx, i in enumerate(S):
+#         # prevent errors by by-passing fist item in string.
+#         if idx == 0:
+#             continue
+#         # if letters are same and side-by-side.
+#         if i == first_letter and S[idx-1] == first_letter:
+#             countIdx = idx
+#             continue
+#         # track last match position and distance from new match.
+#         if i == first_letter:
+#             countIdx += 1
+#             tally += idx - countIdx
+#     return tally
 
 
-# OUTPUT [uncomment & modify if required]
-print(leftrightString('cdacebdaecaddddbdebed'))  # 9
-print(leftrightString('abcdef'))  # 0
-print(leftrightString('bbadba'))  # 2
+# # OUTPUT [uncomment & modify if required]
+# print(leftrightString('cdacebdaecaddddbdebed'))  # 9
+# print(leftrightString('abcdef'))  # 0
+# print(leftrightString('bbadba'))  # 2
+
+
+# # not working
+# def countPairs(N, A):
+#     base_num = N-1
+#     if N <= 2:
+#         return base_num
+
+#     for i in range(base_num, 0, -1):  # N -> 1
+#         # remove last number in array
+#         last_num = A.pop(i)
+#         first_num = A[0]
+#         end_total = first_num + last_num
+#         middle_sum = abs(sum(A) - first_num)
+#         # if end numbers bigger than middle numbers
+#         if middle_sum < end_total:
+#             base_num += 1
+
+#     return base_num
+
+
+# # OUTPUT [uncomment & modify if required]
+# print(countPairs(5, [10, 3, 4, 8, 6]))  # 6
+# print(countPairs(4, [2, 80, 4, 32]))  # 4
+# print(countPairs(2, [2, 4]))  # 1
+myList = [1, 2, 3, 4, 5]
+print(myList.pop(-2))
