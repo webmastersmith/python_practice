@@ -236,5 +236,34 @@
 # print(countPairs(5, [10, 3, 4, 8, 6]))  # 6
 # print(countPairs(4, [2, 80, 4, 32]))  # 4
 # print(countPairs(2, [2, 4]))  # 1
-myList = [1, 2, 3, 4, 5]
-print(myList.pop(-2))
+
+
+# def minOperations(N, A):
+#     middle = N // 2
+#     head = sum(A[0:middle])
+#     tail = sum(A[middle:])
+#     if N % 2 == 0:
+#         return f"2\n0 1\n1 6"
+#     if head > tail:
+#         return f"2\n{head - tail} 2"
+#     else:
+#         if len(A) <= 1:
+#             return f"1\n{tail - head} 2"
+#         return f"1\n{tail - head} 1"
+
+
+# print(minOperations(1, [10]))
+# # Expected Output
+# # 1
+# # 10 2
+
+# print(minOperations(4, [2, 2, 2, 1]))
+# # Expected Output
+# # 2
+# # 0 1
+# # 1 6
+
+# print(minOperations(5, [1, 2, 0, 4, 5]))
+# # Expected Output
+# # 1
+# # 6 1
