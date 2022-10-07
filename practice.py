@@ -267,3 +267,58 @@
 # # Expected Output
 # # 1
 # # 6 1
+
+
+# def my_sum(e):
+#     while len(str(e)) > 1:
+#         e = sum([int(i) for i in list(str(e))])
+#     return e
+
+
+# print(my_sum(3))  # 3
+# print(my_sum(1234))  # 1
+# print(my_sum(8967))  # 3
+# print(my_sum(20938470))  # 6
+
+
+# def phi(n):
+#     amount = 0
+#     gcds = find_gcd(n)
+#     for k in range(1, n + 1):
+#         if k in gcds:
+#             amount += 1
+#     print(amount)
+
+
+# def find_gcd(n):
+#     arr = []
+#     for i in range(1, n + 1):
+#         if n % i == 0:
+#             arr.append(i)
+#     return len(arr)
+
+
+# print(find_gcd(10))  # 4
+
+
+# def trib(n):
+#     if n == 0:
+#         return 1
+#     if n < 0:
+#         return 0
+#     return trib(n-1) + trib(n-2) + trib(n-3)
+
+
+# print(trib(4))
+# print(trib(5))
+# print(trib(8))
+# print(trib(10))
+
+# def trib(n):
+#     a = [1, 1, 2]
+#     for i in range(3, n+1):
+#         a.append(a[i-1]+a[i-2]+a[i-3])
+#     return a[n]
+
+
+# print(trib(4))
